@@ -3,10 +3,10 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import model from "../../assets/barn_testing.glb?url";
 import { useEffect } from "react";
 
-const processMesh = ({ mesh, selectedMesh }) => {
+const processMesh = ({ mesh, selectedWall }) => {
   mesh.material = mesh.material.clone();
   mesh.material.metalness = 0.9;
-  if (mesh.name !== selectedMesh?.name) {
+  if (selectedWall && mesh.name !== selectedWall?.name) {
     mesh.material.opacity = 0.05;
     mesh.material.transparent = true;
   } else {
@@ -15,14 +15,14 @@ const processMesh = ({ mesh, selectedMesh }) => {
   }
 };
 
-function Scene({ selectedMesh }) {
+function Scene({ selectedWall }) {
   const gltf = useLoader(GLTFLoader, model);
   console.log(gltf);
 
   useEffect(() => {
     gltf.scene.traverse(function (object) {
       if (object.isMesh) {
-        processMesh({ mesh: object, selectedMesh });
+        processMesh({ mesh: object, selectedWall });
       }
     });
   });

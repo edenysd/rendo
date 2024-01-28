@@ -2,12 +2,12 @@ import { Canvas } from "@react-three/fiber";
 import { Stats, OrbitControls } from "@react-three/drei";
 import Scene from "./Scene";
 
-function StageModel({ selectedMesh }) {
+function StageModel({ selectedWall }) {
   return (
     <div className="relative w-full h-full" id="canvas-container">
       <Canvas camera={{ position: [5, 5, -5] }}>
-        <Scene selectedMesh={selectedMesh} />
-        <ambientLight intensity={1} />
+        <Scene selectedWall={selectedWall} />
+        <ambientLight intensity={6} />
         <directionalLight
           color="white"
           position={[-5, 5, -5]}

@@ -11,6 +11,9 @@
     "force": "vite --force"
   },
   "dependencies": {
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^2.0.0",
     "@react-three/drei": "^9.96.5",
     "@react-three/fiber": "^8.15.15",
     "react": "^18.2.0",
