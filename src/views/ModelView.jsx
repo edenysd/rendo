@@ -4,19 +4,19 @@ import WallPicker from "../components/WallPicker/WallPicker";
 
 const WALL_MESHES = [
   {
-    mesh: "Front Wall",
+    label: "Front Wall",
     name: "LoftedBarn_6Wall_10x12_None_Wall1",
   },
   {
-    mesh: "Left Wall",
+    label: "Left Wall",
     name: "LoftedBarn_6Wall_10x12_None_Wall2",
   },
   {
-    mesh: "Back Wall",
+    label: "Back Wall",
     name: "LoftedBarn_6Wall_10x12_None_Wall3",
   },
   {
-    mesh: "Right Wall",
+    label: "Right Wall",
     name: "LoftedBarn_6Wall_10x12_None_Wall4",
   },
 ];
