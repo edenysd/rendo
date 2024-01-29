@@ -4,7 +4,7 @@ import Scene from "./Scene";
 
 function StageModel({ selectedWall }) {
   return (
-    <div className="relative w-full h-full" id="canvas-container">
+    <div className="relative h-full w-full" id="canvas-container">
       <Canvas camera={{ position: [5, 5, -5] }}>
         <Scene selectedWall={selectedWall} />
 

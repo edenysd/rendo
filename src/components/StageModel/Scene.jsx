@@ -60,7 +60,7 @@ function Scene({ selectedWall }) {
     });
 
     updateMarkLabel(nextMarkLabel);
-  }, [selectedWall]);
+  }, [selectedWall, gltf.scene]);
 
   return (
     <>
@@ -69,8 +69,8 @@ function Scene({ selectedWall }) {
       {markLabel.position ? (
         <Html position={markLabel.position}>
           <div
-            className="translate-x-[-50%] translate-y-[-50%] pointer-events-none select-none
-          text-pretty font-bold text-2xl
+            className="pointer-events-none translate-x-[-50%] translate-y-[-50%] select-none
+          text-pretty text-2xl font-bold
           "
           >
             {markLabel.label}

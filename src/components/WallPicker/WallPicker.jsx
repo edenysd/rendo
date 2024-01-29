@@ -20,15 +20,15 @@ const WallPicker = ({
         }}
         value={selectedWall?.name || ""}
       >
-        <Select.Trigger className="w-full sm:w-[200px] justify-between inline-flex items-center rounded px-[15px] text-[15px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none mr-3">
+        <Select.Trigger className="mr-3 inline-flex h-[35px] w-full items-center justify-between gap-[5px] rounded bg-white px-[15px] text-[15px] leading-none text-violet11 shadow-[0_2px_10px] shadow-black/10 outline-none hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 sm:w-[200px]">
           <Select.Value placeholder="Select a wall…" />
           <Select.Icon className="text-violet11">
             <ChevronDownIcon />
           </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
-          <Select.Content className="overflow-hidden bg-white rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] z-20">
-            <Select.ScrollUpButton className="flex items-center justify-between h-[25px] bg-white text-violet11 cursor-default">
+          <Select.Content className="z-20 overflow-hidden rounded-md bg-white shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+            <Select.ScrollUpButton className="flex h-[25px] cursor-default items-center justify-between bg-white text-violet11">
               <ChevronUpIcon />
             </Select.ScrollUpButton>
             <Select.Viewport className="p-[5px]">
@@ -40,14 +40,14 @@ const WallPicker = ({
                 ))}
               </Select.Group>
             </Select.Viewport>
-            <Select.ScrollDownButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
+            <Select.ScrollDownButton className="flex h-[25px] cursor-default items-center justify-center bg-white text-violet11">
               <ChevronDownIcon />
             </Select.ScrollDownButton>
           </Select.Content>
         </Select.Portal>
       </Select.Root>
       <button
-        className="inline-flex items-center justify-center rounded font-medium text-[15px] px-[15px] leading-[35px] h-[35px] bg-white text-red-500 outline-1 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black"
+        className="inline-flex h-[35px] items-center justify-center rounded bg-white px-[15px] text-[15px] font-medium leading-[35px] text-red-500 outline-1 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black"
         onClick={() => {
           handleChangeSelectedWall(null);
         }}
@@ -63,18 +63,18 @@ const SelectItem = React.forwardRef(
     return (
       <Select.Item
         className={
-          "cursor-pointer text-[15px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
+          "relative flex h-[25px] cursor-pointer select-none items-center rounded-[3px] pl-[25px] pr-[35px] text-[15px] leading-none text-violet11 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[disabled]:text-mauve8 data-[highlighted]:text-violet1 data-[highlighted]:outline-none"
         }
         {...props}
         ref={forwardedRef}
       >
         <Select.ItemText>{children}</Select.ItemText>
-        <Select.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
+        <Select.ItemIndicator className="absolute left-0 inline-flex w-[25px] items-center justify-center">
           <CheckIcon />
         </Select.ItemIndicator>
       </Select.Item>
     );
-  }
+  },
 );
 
 export default WallPicker;
