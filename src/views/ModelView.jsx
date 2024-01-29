@@ -32,7 +32,7 @@ function ModelView() {
     <div className="h-full w-full">
       <WallPicker
         className={
-          "absolute bottom-0 left-0 z-10 flex w-full flex-col justify-center sm:left-24 sm:top-12 sm:w-auto sm:flex-row"
+          "absolute bottom-0 left-0 z-10 flex h-fit w-full flex-col justify-center sm:left-24 sm:top-12 sm:w-auto sm:flex-row"
         }
         handleChangeSelectedWall={handleChangeSelectedWall}
         selectedWall={selectedWall}
