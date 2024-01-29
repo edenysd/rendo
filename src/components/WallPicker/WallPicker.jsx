@@ -20,7 +20,7 @@ const WallPicker = ({
         }}
         value={selectedWall?.name || ""}
       >
-        <Select.Trigger className="w-[200px] justify-between inline-flex items-center rounded px-[15px] text-[15px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none mr-3">
+        <Select.Trigger className="w-full sm:w-[200px] justify-between inline-flex items-center rounded px-[15px] text-[15px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none mr-3">
           <Select.Value placeholder="Select a wall…" />
           <Select.Icon className="text-violet11">
             <ChevronDownIcon />

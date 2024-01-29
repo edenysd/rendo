@@ -31,7 +31,9 @@ function ModelView() {
   return (
     <div className="w-full h-full">
       <WallPicker
-        className={"absolute left-24 top-12 z-10"}
+        className={
+          "absolute w-full bottom-0 left-0 flex justify-center flex-col sm:flex-row sm:w-auto sm:left-24 sm:top-12 z-10"
+        }
         handleChangeSelectedWall={handleChangeSelectedWall}
         selectedWall={selectedWall}
         wallsList={WALL_MESHES}
