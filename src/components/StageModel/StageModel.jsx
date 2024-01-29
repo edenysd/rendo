@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Stats, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import Scene from "./Scene";
 
 function StageModel({ selectedWall }) {

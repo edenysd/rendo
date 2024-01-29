@@ -2,7 +2,7 @@ import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import model from "../../assets/barn_testing.glb?url";
 import { useEffect, useState } from "react";
-import { Box3, BoxHelper, Vector3 } from "three";
+import { BoxHelper, Vector3 } from "three";
 import { Html } from "@react-three/drei";
 
 function getCenterPoint(mesh) {
